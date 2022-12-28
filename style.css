@@ -1,0 +1,208 @@
+/* CSS Reset */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+* {
+    margin: 0;
+    outline: none;
+}
+  
+html, body {
+    height: 100%;
+}
+  
+body {
+    transition: none !important;
+    -webkit-font-smoothing: antialiased;
+}
+  
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+input, button, textarea, select {
+    font: inherit;
+}
+  
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Project CSS */
+
+:root {
+    --color-primary: hsl(245, 75%, 52%);
+    --color-headings: hsl(223, 47%, 23%);
+    --color-paragraphs: hsl(224, 23%, 55%);
+}
+
+body {
+    padding: 1rem;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background-image: url('images/pattern-background-desktop.svg');
+    background-repeat: repeat-x;
+    background-color: hsl(225, 100%, 94%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 28rem;
+    height: fit-content;
+    border-radius: 16px;
+}
+
+.main-illustration img {
+    width: 100%;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.main-content {
+    text-align: center;
+    padding: 3rem;
+}
+
+.main-content h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--color-headings);
+    margin-bottom: 1rem;
+}
+
+.main-content p {
+    color: var(--color-paragraphs);
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 1.4rem;
+}
+
+.plan {
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.plan-img img {
+    max-width: 3rem;
+}
+
+.plan-button {
+    margin-left: auto;
+}
+
+.plan-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+}
+
+.plan-text h2 {
+    color: var(--color-headings);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.plan-text p {
+    margin-bottom: 0px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.plan-button button {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 900;
+    padding: 0;
+}
+
+.plan-button button:hover {
+    color: hsla(245, 75%, 52%, 0.7);
+    text-decoration: none;
+}
+
+.continue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.continue button {
+    outline: none;
+    border: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.continue .purple {
+    background-color: var(--color-primary);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    filter: drop-shadow(0 0.8rem 0.6rem hsla(245, 75%, 52%, 0.3));
+}
+
+.continue .purple:hover {
+    background-color: hsla(245, 75%, 52%, 0.7);
+}
+
+.continue .transparent {
+    width: fit-content;
+    padding: 0;
+    background-color: transparent;
+    color: hsl(224, 23%, 55%);
+    font-weight: 900;
+}
+
+.continue .transparent:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+}
+
+@media screen and (max-width: 410px) {
+    * {
+        font-size: 14px;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    * {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 260px) {
+    * {
+        font-size: 8px;
+    }
+}
